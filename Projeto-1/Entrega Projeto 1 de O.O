@@ -1,0 +1,87 @@
+# Aluno: Felipe Fernandes Brandim 
+# Matricula: 202016201
+# Aqui irei desenvolver o primeiro projeto de Orientação a objetos:
+# Projeto 1
+
+Módulo FormaGeometrica
+    Estrutura Ponto
+        Real x
+        Real y
+    Fim Estrutura Ponto
+    
+    Estrutura Linha
+        Ponto pontoA
+        Ponto pontoB
+    Fim Estrutura Linha
+    
+    Estrutura Circulo
+        Ponto centro
+        Real raio
+    Fim Estrutura Circulo
+    
+    Estrutura Retangulo
+        Ponto cantoSuperiorEsquerdo
+        Ponto cantoInferiorDireito
+    Fim Estrutura Retangulo
+    
+    Função CalcularDistancia(pontoA, pontoB)
+        Real dx = pontoA.x - pontoB.x
+        Real dy = pontoA.y - pontoB.y
+        Retorne RaizQuadrada(dx * dx + dy * dy)
+    Fim Função CalcularDistancia
+    
+    Função CalcularAreaCirculo(circulo)
+        Retorne 3.14159265 * circulo.raio * circulo.raio
+    Fim Função CalcularAreaCirculo
+    
+    Função CalcularAreaRetangulo(retangulo)
+        Real largura = retangulo.cantoInferiorDireito.x - retangulo.cantoSuperiorEsquerdo.x
+        Real altura = retangulo.cantoSuperiorEsquerdo.y - retangulo.cantoInferiorDireito.y
+        Retorne largura * altura
+    Fim Função CalcularAreaRetangulo
+Fim Módulo FormaGeometrica
+
+Módulo UniversoInterativo
+    Início
+        Ponto ponto1
+        Ponto ponto2
+        Ponto cantoSuperiorEsquerdo
+        Ponto cantoInferiorDireito
+        
+        Escreva("Digite as coordenadas do ponto1 (x y): ")
+        leia ponto1.x
+        leia ponto1.y
+        
+        Escreva("Digite as coordenadas do ponto2 (x y): ")
+        leia ponto2.x
+        leia ponto2.y
+        
+        Escreva("Distância entre ponto1 e ponto2: ", FormaGeometrica.CalcularDistancia(ponto1, ponto2))
+        
+        Linha linha1
+        linha1.pontoA = ponto1
+        linha1.pontoB = ponto2
+        
+        Escreva("Comprimento da linha1: ", FormaGeometrica.CalcularDistancia(linha1.pontoA, linha1.pontoB))
+        
+        Escreva("Digite as coordenadas do canto superior esquerdo do retângulo (x y): ")
+        leia cantoSuperiorEsquerdo.x
+        leia cantoSuperiorEsquerdo.y
+        
+        Escreva("Digite as coordenadas do canto inferior direito do retângulo (x y): ")
+        leia cantoInferiorDireito.x
+        leia cantoInferiorDireito.y
+        
+        Retangulo retangulo1
+        retangulo1.cantoSuperiorEsquerdo = cantoSuperiorEsquerdo
+        retangulo1.cantoInferiorDireito = cantoInferiorDireito
+        
+        Escreva("Área do retângulo1: ", FormaGeometrica.CalcularAreaRetangulo(retangulo1))
+        
+    Fim
+Fim Módulo UniversoInterativo
+
+UniversoInterativo.Início
+
+
+
