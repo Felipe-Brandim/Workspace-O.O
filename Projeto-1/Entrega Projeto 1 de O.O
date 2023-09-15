@@ -3,122 +3,113 @@
 # Aqui irei desenvolver o primeiro projeto de Orientação a objetos:
 # Projeto 1
 
-Módulo FormaGeometrica
-    Estrutura Ponto
-        Real x
-        Real y
-    Fim Estrutura Ponto
+Classe Ponto
+    Real x
+    Real y
     
-    Estrutura Linha
-        Ponto pontoA
-        Ponto pontoB
-    Fim Estrutura Linha
-    
-    Estrutura Circulo
-        Ponto centro
-        Real raio
-    Fim Estrutura Circulo
-    
-    Estrutura Retangulo
-        Ponto cantoSuperiorEsquerdo
-        Ponto cantoInferiorDireito
-    Fim Estrutura Retangulo
-    
-    Estrutura Quadrado
-        Ponto cantoSuperiorEsquerdo
-        Real lado
-    Fim Estrutura Quadrado
-    
-    Função CalcularDistancia(pontoA, pontoB)
-        Real dx = pontoA.x - pontoB.x
-        Real dy = pontoA.y - pontoB.y
-        Retorne RaizQuadrada(dx * dx + dy * dy)
-    Fim Função CalcularDistancia
-    
-    Função CalcularAreaCirculo(circulo)
-        Retorne 3.14159265 * circulo.raio * circulo.raio
-    Fim Função CalcularAreaCirculo
-    
-    Função CalcularAreaRetangulo(retangulo)
-        Real largura = retangulo.cantoInferiorDireito.x - retangulo.cantoSuperiorEsquerdo.x
-        Real altura = retangulo.cantoSuperiorEsquerdo.y - retangulo.cantoInferiorDireito.y
-        Retorne largura * altura
-    Fim Função CalcularAreaRetangulo
-    
-    Função CalcularAreaQuadrado(quadrado)
-        Retorne quadrado.lado * quadrado.lado
-    Fim Função CalcularAreaQuadrado
-Fim Módulo FormaGeometrica
+    Construtor Ponto(x, y)
+        Isso.x = x
+        Isso.y = y
 
-Módulo UniversoInterativo
+Classe Linha
+    Ponto pontoA
+    Ponto pontoB
+    
+    Construtor Linha(pontoA, pontoB)
+        Isso.pontoA = pontoA
+        Isso.pontoB = pontoB
+
+Classe Circulo
+    Ponto centro
+    Real raio
+    
+    Construtor Circulo(centro, raio)
+        Isso.centro = centro
+        Isso.raio = raio
+
+Classe Retangulo
+    Ponto cantoSuperiorEsquerdo
+    Ponto cantoInferiorDireito
+    
+    Construtor Retangulo(cantoSuperiorEsquerdo, cantoInferiorDireito)
+        Isso.cantoSuperiorEsquerdo = cantoSuperiorEsquerdo
+        Isso.cantoInferiorDireito = cantoInferiorDireito
+
+Classe Quadrado
+    Ponto cantoSuperiorEsquerdo
+    Real lado
+    
+    Construtor Quadrado(cantoSuperiorEsquerdo, lado)
+        Isso.cantoSuperiorEsquerdo = cantoSuperiorEsquerdo
+        Isso.lado = lado
+
+Função CalcularDistancia(pontoA, pontoB)
+    Real dx = pontoA.x - pontoB.x
+    Real dy = pontoA.y - pontoB.y
+    Retorne RaizQuadrada(dx * dx + dy * dy)
+Fim Função CalcularDistancia
+
+Função CalcularAreaCirculo(circulo)
+    Retorne 3.14159265 * circulo.raio * circulo.raio
+Fim Função CalcularAreaCirculo
+
+Função CalcularAreaRetangulo(retangulo)
+    Real largura = retangulo.cantoInferiorDireito.x - retangulo.cantoSuperiorEsquerdo.x
+    Real altura = retangulo.cantoSuperiorEsquerdo.y - retangulo.cantoInferiorDireito.y
+    Retorne largura * altura
+Fim Função CalcularAreaRetangulo
+
+Função CalcularAreaQuadrado(quadrado)
+    Retorne quadrado.lado * quadrado.lado
+Fim Função CalcularAreaQuadrado
+
+Classe UniversoInterativo
     Início
-        Ponto ponto1
-        Ponto ponto2
-        Ponto cantoSuperiorEsquerdo
-        Ponto cantoInferiorDireito
-        Ponto cantoSuperiorEsquerdoQuadrado
-        Real ladoQuadrado
-        
         Escreva("Digite as coordenadas do ponto1 (x y): ")
-        leia ponto1.x
-        leia ponto1.y
+        leia x1, y1
+        Ponto ponto1 = Ponto(x1, y1)
         
         Escreva("Digite as coordenadas do ponto2 (x y): ")
-        leia ponto2.x
-        leia ponto2.y
+        leia x2, y2
+        Ponto ponto2 = Ponto(x2, y2)
         
-        Escreva("Distância entre ponto1 e ponto2: ", FormaGeometrica.CalcularDistancia(ponto1, ponto2))
+        Escreva("Distância entre ponto1 e ponto2: ", CalcularDistancia(ponto1, ponto2))
         
-        Linha linha1
-        linha1.pontoA = ponto1
-        linha1.pontoB = ponto2
-        
-        Escreva("Comprimento da linha1: ", FormaGeometrica.CalcularDistancia(linha1.pontoA, linha1.pontoB))
+        Linha linha1 = Linha(ponto1, ponto2)
         
         Escreva("Digite as coordenadas do canto superior esquerdo do retângulo (x y): ")
-        leia cantoSuperiorEsquerdo.x
-        leia cantoSuperiorEsquerdo.y
+        leia xs, ys
+        Ponto cantoSuperiorEsquerdo = Ponto(xs, ys)
         
         Escreva("Digite as coordenadas do canto inferior direito do retângulo (x y): ")
-        leia cantoInferiorDireito.x
-        leia cantoInferiorDireito.y
+        leia xi, yi
+        Ponto cantoInferiorDireito = Ponto(xi, yi)
         
-        Retangulo retangulo1
-        retangulo1.cantoSuperiorEsquerdo = cantoSuperiorEsquerdo
-        retangulo1.cantoInferiorDireito = cantoInferiorDireito
+        Retangulo retangulo1 = Retangulo(cantoSuperiorEsquerdo, cantoInferiorDireito)
         
-        Escreva("Área do retângulo1: ", FormaGeometrica.CalcularAreaRetangulo(retangulo1))
+        Escreva("Área do retângulo: ", CalcularAreaRetangulo(retangulo1))
         
         Escreva("Digite as coordenadas do canto superior esquerdo do quadrado (x y): ")
-        leia cantoSuperiorEsquerdoQuadrado.x
-        leia cantoSuperiorEsquerdoQuadrado.y
+        leia xq, yq
+        Ponto cantoSuperiorEsquerdoQuadrado = Ponto(xq, yq)
         
         Escreva("Digite o tamanho do lado do quadrado: ")
         leia ladoQuadrado
+        Quadrado quadrado1 = Quadrado(cantoSuperiorEsquerdoQuadrado, ladoQuadrado)
         
-        Quadrado quadrado1
-        quadrado1.cantoSuperiorEsquerdo = cantoSuperiorEsquerdoQuadrado
-        quadrado1.lado = ladoQuadrado
-        
-        Escreva("Área do quadrado1: ", FormaGeometrica.CalcularAreaQuadrado(quadrado1))
-        
-        Ponto centroCirculo
-        Real raioCirculo
+        Escreva("Área do quadrado: ", CalcularAreaQuadrado(quadrado1))
         
         Escreva("Digite as coordenadas do centro do círculo (x y): ")
-        leia centroCirculo.x
-        leia centroCirculo.y
+        leia xc, yc
+        Ponto centroCirculo = Ponto(xc, yc)
         
         Escreva("Digite o raio do círculo: ")
         leia raioCirculo
+        Circulo circulo1 = Circulo(centroCirculo, raioCirculo)
         
-        Circulo circulo1
-        circulo1.centro = centroCirculo
-        circulo1.raio = raioCirculo
-        
-        Escreva("Área do círculo1: ", FormaGeometrica.CalcularAreaCirculo(circulo1))
+        Escreva("Área do círculo: ", CalcularAreaCirculo(circulo1))
         
     Fim
-Fim Módulo UniversoInterativo
+Fim Classe UniversoInterativo
 
 UniversoInterativo.Início
