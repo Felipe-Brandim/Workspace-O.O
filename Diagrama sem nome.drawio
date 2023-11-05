@@ -1,9 +1,45 @@
-<mxfile host="app.diagrams.net" modified="2023-11-01T18:55:45.031Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.76" version="22.0.8" etag="WeLc3a-Gd1yx6bCzbtEd" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-05T21:45:28.597Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.76" etag="G61oaP_dHhV8LTeIhfRq" version="22.0.8" type="github">
   <diagram name="Página-1" id="xpvz4ppAE0FN54pg8b1R">
-    <mxGraphModel>
+    <mxGraphModel dx="827" dy="879" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="UuzFbQRkPW1018O6XRMM-1" value="Usuário" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-321" y="103" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UuzFbQRkPW1018O6XRMM-3" value="Tela Inicial" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;fontSize=16;width=89;height=28;" vertex="1" parent="1">
+          <mxGeometry x="-171" y="-21" width="198" height="308.5" as="geometry" />
+        </mxCell>
+        <mxCell id="UuzFbQRkPW1018O6XRMM-5" value="Novo Jogo" style="ellipse;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-142" y="49" width="140" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="UuzFbQRkPW1018O6XRMM-6" value="Como Jogar?" style="ellipse;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-142" y="122" width="140" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="UuzFbQRkPW1018O6XRMM-7" value="Recorde" style="ellipse;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-142" y="203" width="140" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="UuzFbQRkPW1018O6XRMM-8" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;fontSize=12;curved=1;entryX=0.021;entryY=0.719;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="UuzFbQRkPW1018O6XRMM-5">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="-287" y="132.75" as="sourcePoint" />
+            <mxPoint x="-127" y="132.75" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UuzFbQRkPW1018O6XRMM-9" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;fontSize=12;curved=1;entryX=0.021;entryY=0.344;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="UuzFbQRkPW1018O6XRMM-6">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="-286" y="146" as="sourcePoint" />
+            <mxPoint x="-150" y="152" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UuzFbQRkPW1018O6XRMM-10" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;fontSize=12;curved=1;" edge="1" parent="1" target="UuzFbQRkPW1018O6XRMM-7">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="-282" y="162" as="sourcePoint" />
+            <mxPoint x="-85" y="201" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UuzFbQRkPW1018O6XRMM-11" value="Usuário" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="161" y="103.25" width="30" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
