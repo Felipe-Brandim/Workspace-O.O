@@ -104,10 +104,10 @@ def infoBar():
         text_x = text.get_rect().width
         text_y = text.get_rect().height
         screen.blit(text,((150 - (text_x / 2)),(50 - (text_y / 2))))
-        name=input("Digite Seu nome,campeão.")
-        def save_winner_name(name):
-          with open("winner_names.txt", "a") as file:
-           file.write(name + "\n")
+        #name=input("Digite Seu nome,campeão.")
+        #def save_winner_name(name):
+          #with open("winner_names.txt", "a") as file:
+           #file.write(name + "\n")
 	  
     elif gameState == 2:    #loose
         text = font.render("Que pena,você perdeu.",True,YELLOW)
